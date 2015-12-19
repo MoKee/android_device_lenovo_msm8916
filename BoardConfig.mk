@@ -92,7 +92,7 @@ BLUETOOTH_HCI_USE_MCT := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.wt88047
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm8916
 
 # Camera
 TARGET_USE_VENDOR_CAMERA_EXT := true
@@ -188,8 +188,10 @@ BOARD_SEPOLICY_DIRS += device/lenovo/msm8916/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     mm-qcamerad.te \
+    healthd.te \
     debuggerd.te \
     init.te \
+    keystore.te \
     mediaserver.te \
     untrusted_app.te \
     ueventd.te \
